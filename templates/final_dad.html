@@ -1,0 +1,13 @@
+ {% block content %}
+	<body>
+    {% if dadName is defined %} 
+
+        <h2>Meet your new dad: {{ dadName }}!</h2><br>
+        
+        <img src='/static/{{ dadFile }}'>
+        
+    {% else %}
+        <p>Sorry, we can't match you with a dad.</p>
+    {% endif %}
+    </body>>
+{% endblock %}

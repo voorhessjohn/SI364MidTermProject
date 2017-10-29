@@ -1,0 +1,15 @@
+{% block content %}
+  <h1>Choose Your TV Dad, {{ username }}!</h1>
+  <form method="POST" action="/dadresult">
+      {{ form.hidden_tag() }}
+
+      
+      {% for message in get_flashed_messages() %} 
+      {{ message }}
+      {% endfor %}
+      <p>{{ form.attitude.label }}{{ form.attitude() }}</p>
+      <p>{{ form.dress.label }}{{ form.dress() }}</p>
+      <p>{{ form.job.label }}{{ form.job() }}</p>
+      {{ form.submit() }}
+  </form>
+{% endblock %}

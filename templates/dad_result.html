@@ -1,0 +1,16 @@
+{% block content %}
+	<body>
+    
+    {% if result is defined and result|length > 0 %} 
+        <h2>Pick a dad! Any dad!</h2><br>
+
+        
+        {% for guy in result %} 
+            <p><a href='/finaldad/{{ guy }}'>Pick Me!</a></p>
+        {% endfor %}
+    {% else %}
+        <p>Sorry, we can't match you with a dad.</p>
+    {% endif %}
+    </body>
+
+{% endblock %}
